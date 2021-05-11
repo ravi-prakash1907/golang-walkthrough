@@ -53,6 +53,19 @@ __Use the following command to run the `golang` on command line:__ <br />
 > **--rm** Automatically remove the container when it exits i.e. stops <br />
 >
 
+### (C) Using shell scripts  
+
+You can also execute everything just using a single shell command.  
+We have provided you 2 shell scripts:  
+
+1. **`build.sh`** :  
+> - it builds the image i.e. followed by running the container to provide you the access to `go` runtime via `bash`  
+> - run ```sh ./build.sh```  
+
+2. **`run.sh`** :  
+> - it just pulls an existing image (if any) and runs it to provide you the access to `go` runtime via `bash`  
+> - run ```sh ./run.sh```  
+
 ---  
 
 [_visit here_](Golang-Programs) _for a quick walkthrough with ```golang```_
