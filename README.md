@@ -1,5 +1,7 @@
 # A Crash Course on `golang`
 
+![golang banner](./assets/banner.jpg)  
+
 I've create this repo to recollect myself for `golang` and have a quick recape to come back on the track. This repository store the implementation of some most common and necessary things in `golang`.  
 This repository consists of the whole `golang` environment along with the working directory 
 containerized using **Docker**. All what you need is to have the docker installed on your machine.  
