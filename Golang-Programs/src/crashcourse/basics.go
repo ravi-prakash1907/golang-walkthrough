@@ -6,7 +6,7 @@ import "fmt"
 func main(){
 	// printing regilar output
 	fmt.Println("Hello World!")
-/*
+
 	// declearing primary variables and constants
 	basicDeclearations()
 
@@ -27,7 +27,7 @@ func main(){
 
 	// Conditional stmsts.
 	conditionals()
-*/
+
 	// Derived datatypes
 	derivedsVar()
 
