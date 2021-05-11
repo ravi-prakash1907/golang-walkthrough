@@ -1,6 +1,6 @@
 # A Crash Course on `golang`
 
-I've create this repo to store the implementation of some most common and necessary things in `golang`.  
+I've create this repo to recollect myself for `golang` and have a quick recape to come back on the track. This repository store the implementation of some most common and necessary things in `golang`.  
 This repository consists of the whole `golang` environment along with the working directory 
 containerized using **Docker**. All what you need is to have the docker installed on your machine.  
 
@@ -65,6 +65,14 @@ We have provided you 2 shell scripts:
 2. **`run.sh`** :  
 > - it just pulls an existing image (if any) and runs it to provide you the access to `go` runtime via `bash`  
 > - run ```sh ./run.sh```  
+
+## Todo  
+
+There is a long way to go... I aim to add following additional things into this repo:  
+1. A go command/syntex cheatsheet  
+2. Detailed description (with examples) on _goroutine_ and _http server_  ...
+
+Conttributions are happily accepted!!  
 
 ---  
 
