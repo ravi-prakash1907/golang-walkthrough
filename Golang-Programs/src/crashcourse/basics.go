@@ -83,8 +83,6 @@ func formattings(){
 		varB = 3
 	)
 
-
-
 	// bools
 	var flag bool = true 
 	fmt.Printf("Pi = %f \n", pi)
