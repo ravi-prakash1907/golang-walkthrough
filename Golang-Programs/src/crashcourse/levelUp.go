@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-/*
+
 	// Maps :  as dictionary
 	maps()
 
@@ -25,7 +25,7 @@ func main() {
 	fmt.Println("recover() allows to continue execution even if an error occures in b/w")
 	fmt.Println(safeDevision(6,0))
 	fmt.Println(safeDevision(6,3))
-*/
+
 	// panic : for error handling
 	demoPanic()
 
