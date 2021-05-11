@@ -1,4 +1,4 @@
-# Crash Course on `golang`
+# A Crash Course on `golang`
 
 I've create this repo to store the implementation of some most common and necessary things in `golang`.  
 This repository consists of the whole `golang` environment along with the working directory 
