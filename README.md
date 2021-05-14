@@ -1,10 +1,10 @@
-# A Crash Course on _golang_
-
+# A Crash Course on _golang_  
 ![golang banner](./assets/banner.jpg)  
 
 I've create this repo to recollect myself for `golang` and have a quick recape to come back on the track. This repository store the implementation of some most common and necessary things in _golang_.  
 This repository consists of the whole _golang_ environment along with the working directory 
 containerized using **Docker**. All what you need is to have the docker installed on your machine.  
+
 
 ## Quick Set-Up  
 Just follow the following easy steps to run the codes present in the repository without worrying about installing the _go_ on your system locally!  
@@ -60,19 +60,26 @@ __Use the following command to run the _golang_ on command line:__ <br />
 You can also execute everything just using a single shell command.  
 We have provided you 2 shell scripts:  
 
-1. **`build.sh`** :  
-> - it builds the image i.e. followed by running the container to provide you the access to _go_ runtime via `bash`  
+1. **build.sh** :  
+> - it builds the image i.e. followed by running the container to provide you the access to _go_ runtime via bash  
 > - run ```sh ./build.sh```  
 
-2. **`run.sh`** :  
-> - it just pulls an existing image (if any) and runs it to provide you the access to _go_ runtime via `bash`  
+2. **run.sh** :  
+> - it just pulls an existing image (if any) and runs it to provide you the access to _go_ runtime via bash  
 > - run ```sh ./run.sh```  
+
+## Get Familier  
+
+This [go command/syntex cheatsheet](./assets/cheatsheet.pdf) can be accessed to get well aware with the initial of the _golang_.  
+
 
 ## Todo  
 
 There is a long way to go... I aim to add following additional things into this repo:  
-1. A go command/syntex cheatsheet  
-2. Detailed description (with examples) on _goroutine_ and _http server_  ...
+1. [Detailed description](./Golang-Programs/src/) (with examples) on _goroutine_ and _http server_  
+2. [gRPC](https://grpc.io/docs/what-is-grpc/introduction/)  
+3. [Concurrency patterns](https://blog.golang.org/pipelines)  
+4. Microservices  ...
 
 Conttributions are happily accepted!!  
 
@@ -80,3 +87,8 @@ Conttributions are happily accepted!!
 
 [_visit here_](Golang-Programs) _for a quick walkthrough with ```golang```_
 
+
+## References  
+
+1. [Cheatography](https://cheatography.com/)  
+2. [Derek Banas](https://www.youtube.com/c/derekbanas/)  
