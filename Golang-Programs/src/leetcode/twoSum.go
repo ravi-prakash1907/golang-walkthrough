@@ -21,18 +21,12 @@ func twoSum(nums []int, target int) []int {
     var pos = []int {-1,-1}
 
 	for i, val := range nums {
-		if val <= target {
-            
-            pos[0] = i
-            for j := i+1; j < len(nums); j++ {
-                
-                if nums[j] + nums[pos[0]] == target {
-                    pos[1] = j
-                    goto END
-                }
-                
-            }
-            
+        pos[0] = i
+        for j := i+1; j < len(nums); j++ {   
+            if nums[j] + val == target {
+                pos[1] = j
+                goto END
+            }        
         }
 	}
     
