@@ -1,15 +1,13 @@
-// creats a dummy blockchains
-package main
+package blockchain
 
 import (
-	"fmt"
 	"bytes"
 	"crypto/sha256"
 )
 
 // a chain of blocks
 type BlockChain struct {
-	blocks []*Block
+	Blocks []*Block
 }
 
 // each block gonna have a data along with a hash
@@ -39,9 +37,9 @@ func CreateBlock(data string, prevHash []byte) *Block {
 }
 
 func (chain *BlockChain) AddBlock(data string) {
-	prevBlock := chain.blocks[len(chain.blocks)-1]
+	prevBlock := chain.Blocks[len(chain.Blocks)-1]
 	new := CreateBlock(data, prevBlock.Hash)
-	chain.blocks = append(chain.blocks, new)
+	chain.Blocks = append(chain.Blocks, new)
 }
 
 func Genesis() *Block {
@@ -50,22 +48,4 @@ func Genesis() *Block {
 
 func InitBlockChain() *BlockChain {
 	return &BlockChain{[]*Block{Genesis()}}
-}
-
-func main() {
-	chain := InitBlockChain()
-
-	chain.AddBlock("First Block after Genesis")
-	chain.AddBlock("Second Block after Genesis")
-	chain.AddBlock("Third Block after Genesis")
-
-	// print our blockchain
-	for _, block := range chain.blocks {
-		// fmt.Printf("Previous Hash: %x\n", block.PrevHash)
-		fmt.Printf("Data in Block: %s\n", block.Data)
-		fmt.Printf("This Hash: %x\n\n", block.Hash)
-	}
-
-	fmt.Println("Run the code as many time as you want, the hashes will remain same!!")
-	fmt.Println("Also remember, changing data from even from one block will ultimatly lead the all following hashes to change!!")
 }
