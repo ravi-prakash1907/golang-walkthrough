@@ -16,23 +16,18 @@ type Block struct {
 	Hash []byte    // hash of this block
 	Data []byte    // data (ledger, doc ets) in this block 
 	PrevHash []byte // last block's hash 
-}
-
-// to get hash value
-func (b *Block) DeriveHash() {
-	// join bytes' slices
-	info := bytes.Join([][]byte{b.Data, b.PrevHash}, []byte{})
-	hash := sha256.Sum256(info) // actual blockchain hash is far complex
-	b.Hash = hash[:]
-
-	// here hashes are derived using this data + "previous hash"
-	// any change in previous data will change its hash and 
-	// it'll modify all following blocks' hash too
+	Nonce int	// to store nonce for validation implemtation
 }
 
 func CreateBlock(data string, prevHash []byte) *Block {
-	block := &Block{[]byte{}, []byte(data), prevHash}
-	block.DeriveHash()
+	block := &Block{[]byte{}, []byte(data), prevHash, 0}
+	// running pow algo
+	pow := NewProof(block)
+	nonce, hash := pow.Run()
+
+	block.Hash = hash[:]
+	block.Nonce = nonce
+	
 	return block
 }
 
