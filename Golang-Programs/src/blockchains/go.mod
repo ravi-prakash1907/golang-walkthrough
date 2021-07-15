@@ -1,4 +1,4 @@
-module github.com/ravi-prakash1907/golang-walkthrough
+module github.com/ravi-prakash1907/golang-walkthrough/Golang-Programs/src/blockchains
 
 go 1.13
 

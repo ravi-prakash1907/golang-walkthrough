@@ -4,7 +4,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/ravi-prakash1907/golang-walkthrough/tree/main/Golang-Programs/src/blockchains/blockchain"
+	"github.com/ravi-prakash1907/golang-walkthrough/Golang-Programs/src/blockchains/blockchain"
 )
 
 func main() {
@@ -16,7 +16,7 @@ func main() {
 
 	// print our blockchain
 	for _, block := range chain.blocks {
-		// fmt.Printf("Previous Hash: %x\n", block.PrevHash)
+		fmt.Printf("Previous Hash: %x\n", block.PrevHash)
 		fmt.Printf("Data in Block: %s\n", block.Data)
 		fmt.Printf("This Hash: %x\n\n", block.Hash)
 

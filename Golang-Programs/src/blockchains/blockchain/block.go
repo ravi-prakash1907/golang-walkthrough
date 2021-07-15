@@ -1,10 +1,5 @@
 package blockchain
 
-import (
-	"bytes"
-	"crypto/sha256"
-)
-
 // a chain of blocks
 type BlockChain struct {
 	Blocks []*Block

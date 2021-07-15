@@ -2,6 +2,14 @@
 
 package blockchain
 
+import (
+	"math"
+	"fmt"
+	"log"
+	"bytes"
+	"math/big"
+	"crypto/sha256"
+)
 // forcing network to work by adding a block to the chain 
 // it secure too
 
@@ -17,7 +25,7 @@ package blockchain
 // Requirements:
 // 1. initial few bytes must be 0s (aks in case of bitcoin's hash-cash, it required initial 20-bits to be 0s)
 
-const Difficulty = 18 #12 // in real BC, algos. gradually keep on increasing the Values as more blocks added
+const Difficulty = 18 //12 // in real BC, algos. gradually keep on increasing the Values as more blocks added
 
 type ProofOfWork struct {
 	Block *Block
