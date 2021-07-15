@@ -79,6 +79,8 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 			nonce = nonce+1;
 		}
 	}
+	
+	return nonce, hash[:]
 }
 
 func (pow *ProofOfWork) Validate() bool {
