@@ -74,7 +74,7 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 		if intHash.Cmp(pow.Target) == -1 {
 			break
 		} else {
-			nonce++
+			nonce = nonce+1;
 		}
 	}
 	fmt.Println()
@@ -82,7 +82,7 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 	return nonce, hash[:]
 }
 
-func (pow *ProofOfWork) validate() bool {
+func (pow *ProofOfWork) Validate() bool {
 	var intHash big.Int
 
 	data := pow.InitData(pow.Block.Nonce)
