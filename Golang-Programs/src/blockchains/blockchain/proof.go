@@ -69,17 +69,16 @@ func (pow *ProofOfWork) Run() (int, []byte) {
 		hash := sha256.Sum256(data)
 
 		fmt.Printf("\r%x", hash)
+		
 		intHash.SetBytes(hash[:])
 
 		if intHash.Cmp(pow.Target) == -1 {
-			break
+			fmt.Println()
+			return nonce, hash[:]
 		} else {
 			nonce = nonce+1;
 		}
 	}
-	fmt.Println()
-
-	return nonce, hash[:]
 }
 
 func (pow *ProofOfWork) Validate() bool {
