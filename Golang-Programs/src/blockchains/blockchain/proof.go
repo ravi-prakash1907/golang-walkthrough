@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"bytes"
+	"encoding/binary"
 	"math/big"
 	"crypto/sha256"
 )
@@ -33,7 +34,7 @@ type ProofOfWork struct {
 }
 
 func NewProof(b *Block) *ProofOfWork {
-	target := bit.NewInt(1)
+	target := big.NewInt(1)
 	// use target to shift left (Lsh) the num. of bytes by clculated places
 	target.Lsh(target, uint(256-Difficulty))
 
