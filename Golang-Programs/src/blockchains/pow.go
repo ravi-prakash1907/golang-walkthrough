@@ -3,7 +3,7 @@ package main
 
 import (
 	"fmt"
-
+	"strconv"
 	"github.com/ravi-prakash1907/golang-walkthrough/Golang-Programs/src/blockchains/blockchain"
 )
 
@@ -15,7 +15,7 @@ func main() {
 	chain.AddBlock("Third Block after Genesis")
 
 	// print our blockchain
-	for _, block := range chain.blocks {
+	for _, block := range chain.Blocks {
 		fmt.Printf("Previous Hash: %x\n", block.PrevHash)
 		fmt.Printf("Data in Block: %s\n", block.Data)
 		fmt.Printf("This Hash: %x\n\n", block.Hash)
