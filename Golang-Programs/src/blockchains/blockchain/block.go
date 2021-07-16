@@ -1,6 +1,7 @@
 package blockchain
 
 import (
+	"log"
 	"bytes"
 	"encoding/gob"
 )
@@ -42,11 +43,11 @@ func  (b *Block) Serialize() []byte {
 }
 
 
-func  (data []byte) Deerialize() *Block {
+func  Deserialize(data []byte) *Block {
 	var block Block
 	decoder := gob.NewDecoder(bytes.NewReader(data))
 
-	err := decoder.Decode(b)
+	err := decoder.Decode(&block)
 
 	Handle(err)
 
